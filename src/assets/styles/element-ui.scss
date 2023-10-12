@@ -1,0 +1,63 @@
+// treeselect组件样式
+.treeselect-main-dialog {
+  width: 100%;
+  line-height: 28px;
+  margin-top: 4px;
+
+  .vue-treeselect__placeholder {
+    line-height: 32px;
+  }
+
+  .vue-treeselect__control {
+    height: 32px !important;
+  }
+}
+
+
+// input框余留
+.input-limit {
+  .el-input__inner {
+    padding-right: 60px;
+  }
+}
+
+.textarea-limt-padding {
+  .el-textarea__inner {
+    padding: 5px 40px 15px 15px;
+  }
+}
+
+.el-dialog__body {
+  padding: 0 20px 20px 20px;
+  overflow: auto;
+  max-height: calc(85vh - 120px);
+}
+
+// 表格样式修改
+.el-table {
+  th.el-table__cell {
+    padding:10px 0!important;
+    background-color: #f8f8f9 !important;
+    &>.cell {
+      padding: 0 10px;
+      font-weight: 600;
+      color: #515a6e;
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+  td.el-table__cell {
+    padding:6px 0!important;
+    &>.cell {
+      text-align: center;
+    }
+  }
+  .delete-text-btn{
+    color:red;
+  }
+  .table-td-left{
+    .cell {
+      text-align:left;
+    }
+  }
+}

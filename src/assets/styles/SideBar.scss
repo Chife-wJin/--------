@@ -1,0 +1,134 @@
+.sidebar-container {
+  width: 240px;
+  height: 100%;
+  background-color: #fff;
+  // box-shadow: 2px 0 6px #00152959;
+  overflow: auto;
+
+  .el-scrollbar {
+    height: calc(100vh - 70px);
+
+    .el-scrollbar__wrap {
+      overflow-x: hidden;
+    }
+  }
+}
+
+
+
+// when menu collapsed
+.el-menu--vertical {
+  &>.el-menu {
+    .svg-icon {
+      margin-right: 10px;
+    }
+  }
+
+  .nest-menu .el-submenu .el-submenu__title span {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .nest-menu .is-active .el-submenu__title span {
+    color: #167be4;
+    font-weight: bold;
+  }
+
+  .nest-menu .el-submenu {
+    .el-icon-arrow-down:before {
+      color: #999;
+    }
+  }
+
+  .is-active {
+    .el-icon-arrow-down:before {
+      color: #fff;
+    }
+  }
+
+  .submenu-title-noDropdown {
+    font-size: 16px;
+  }
+
+  .el-submenu__title {
+    background: #cde7fa;
+    border-bottom: solid 1px #dbecfa;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .el-submenu.is-active .el-submenu__title {
+    border-bottom: solid 1px #dbecfa;
+    background: #067ae9;
+    color: #fff;
+  }
+
+  .nest-menu .nest-menu .el-menu-item {
+    background: #f5f6fa;
+  }
+
+  .nest-menu .nest-menu .is-active {
+    background: #2c98f2;
+  }
+
+  .nest-menu .el-submenu>.el-submenu__title,
+  .el-menu-item {
+    background: #fff;
+    border-bottom: solid 1px #dbecfa;
+    ;
+
+    &:hover {
+      // you can use $subMenuHover
+      background-color: rgba(6, 122, 233, .3) !important;
+
+      span {
+        color: #167be4;
+      }
+    }
+
+    &.is-active {
+      color: #fff;
+      background: #2c98f2;
+      // font-weight: bold;
+      // .el-submenu__title{
+      //   background: #067ae9;
+      // }
+    }
+  }
+
+  // the scroll bar appears when the subMenu is too long
+  >.el-menu--popup {
+    max-height: 100vh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track-piece {
+      background: #d3dce6;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #99a9bf;
+      border-radius: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .el-menu-item {
+      height: 56px !important;
+    }
+
+    .nest-menu .nest-menu .el-menu-item {
+      height: 45px !important;
+      line-height: 40px;
+    }
+
+    .nest-menu .nest-menu {
+      // height: 45px;
+      line-height: 45px;
+    }
+  }
+}

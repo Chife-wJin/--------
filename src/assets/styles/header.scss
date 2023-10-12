@@ -1,0 +1,140 @@
+.platform-layout-header {
+  // background-color: #1576e0;
+  background:url(../images/headerbg.jpg) no-repeat center 0;
+  background-size: cover;
+  display: flex;
+  height: 60px;
+  padding: 0;
+  margin-left: -1px;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+
+  .platform-layout-header-left {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    .platform-layout-header-logo {
+      min-width: 240px;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      cursor: pointer;
+      transition: all .2s ease;
+      font-size: 18px;
+      color: #fff;
+      .header-logo-name{
+        font-size: 22px;
+        font-family: "cursive";
+      }
+      .header-logo-line{
+        margin:0 10px;
+      }
+      .header-logo-projectname{
+        font-size: 16px;
+        font-family: "cursive";
+      }
+    }
+  }
+
+  .platform-layout-header-menu {
+    height: 100%;
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+
+    .el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,
+    .el-menu--horizontal>.el-menu-item:not(.is-disabled):hover,
+    .el-menu--horizontal>.el-submenu .el-submenu__title:hover {
+      background-color: #2460c2 !important;
+    }
+
+    .topmenu-container {
+
+      height: 100%;
+      border-bottom: none;
+
+      .el-menu-item {
+        padding: 0 20px;
+        height: 100%;
+        margin: 0 !important;
+        transition: none;
+        height: 60px;
+        border-bottom: none !important;
+        display: flex;
+        align-items: center;
+
+        &.is-active {
+          border-bottom: none !important;
+          background-color: #2460c2 !important;
+        }
+
+        .svg-icon {
+          margin-right: 5px !important;
+          vertical-align: middle;
+        }
+
+        .menu-text {
+          font-size: 12px;
+          color: #fff;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+
+  .platform-layout-header-action {
+    display: flex;
+    min-width: 240px;
+    align-items: center;
+    justify-content: space-around;
+
+    .platform-layout-header-action__item {
+      display: flex !important;
+      height: 70px;
+      padding: 0 2px;
+      font-size: 1.2em;
+      cursor: pointer;
+      align-items: center;
+
+      .platform-layout-header-action__username {
+        font-size: 14px;
+        color: #fff;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.el-menu--horizontal>.el-submenu .el-submenu__title {
+  height: 70px;
+  line-height: 70px;
+}
+
+@media screen and (min-width: 1600px) {
+  .topmenu-container .el-menu-item .menu-text {
+    font-size: 16px !important;
+  }
+  .platform-layout-header-action {
+    min-width: 288px!important;
+  }
+  .platform-layout-header {
+    height: 70px !important;
+  }
+
+  .el-menu-item {
+    height: 70px !important;
+    .menu-text {
+      font-size: 14px!important;
+    }
+  }
+
+  .platform-layout-header .platform-layout-header-logo {
+    min-width: 288px !important;
+    padding-left: 28px !important;
+    font-size: 26px !important;
+  }
+}
